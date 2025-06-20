@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foxhog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes pop {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .animate-pop {
+        animation: pop 0.4s ease-out forwards;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="flex justify-between py-4 px-8">
+        <div>
+          <div class="font-bold text-2xl flex items-center space-x-2">
+            <img
+              src="Red_Triangle.png"
+              alt="Logo"
+              class="w-10 h-10 inline-block -mr-1 mt-1"
+            />
+            <span>Foxhog<sup class="-mx-1">&reg;</sup></span>
+          </div>
+          <div class="ml-10 -mt-4">
+            <sub class="text-sm font-semibold mx-8 -mt-4">INDIA</sub>
+          </div>
+        </div>
+
+        <div class="flex gap-8 items-center font-semibold text-gray-700">
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Leadership
+          </a>
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            World News
+          </a>
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Why Choose Us
+          </a>
+          <a
+            href="#"
+            class="relative transition-colors duration-300 hover:text-red-600 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Business
+          </a>
+        </div>
+
+        <div class="flex items-center">
+          <div class="relative inline-block group">
+            <div
+              class="pointer-events-none absolute -inset-0.5 rounded-md bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"
+            ></div>
+            <button
+              class="relative px-4 py-2 bg-red-600 text-white font-semibold rounded transition-transform duration-300 group-hover:scale-105"
+            >
+              Let's Grow Together
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- second section -->
+
+      <section class="w-full bg-white py-16 my-20">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-12"
+        >
+          <!-- Left Text Section (50%) -->
+          <div class="w-full md:w-1/2 space-y-6">
+            <!-- <span
+              class="inline-block px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full"
+            >
+              Your Startup's Secret Weapon
+            </span> -->
+            <h1 class="text-5xl font-bold">
+              <span class="text-red-600 animate-pulse"
+                >Welcome to Foxhog :</span
+              >
+
+              <span class="text-gray-900"
+                >Where Big Ideas Become Big Empires</span
+              >
+            </h1>
+            <p class="text-gray-500 text-lg">
+              Connect with top investors, grab expert strategies, and rocket
+              your startup to the stars. Let's make it happen.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <div class="relative inline-block group">
+                <div
+                  class="pointer-events-none absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"
+                ></div>
+                <button
+                  class="relative bg-red-600 text-white font-semibold px-6 py-3 rounded-lg transition-transform duration-300 group-hover:scale-105"
+                >
+                  Get Started →
+                </button>
+              </div>
+
+              <!-- <button
+                class="bg-white border border-gray-300 hover:border-gray-500 text-blue-800 font-semibold px-6 py-3 rounded-lg transition"
+              >
+                Explore Services
+              </button> -->
+            </div>
+          </div>
+
+          <!-- Right Image Section (50%) -->
+          <!-- Right Video Section (50%) -->
+          <div class="w-full md:w-1/2">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-xl aspect-video group"
+              onmouseenter="loadVideo()"
+              onmouseleave="removeVideo()"
+              id="videoContainer"
+            >
+              <!-- Thumbnail Image -->
+              <img
+                src="emerging.png"
+                alt="Startup Team"
+                class="w-full h-full object-cover"
+                id="thumbnailImage"
+              />
+            </div>
+          </div>
+
+          <script>
+            const videoUrl =
+              "https://www.youtube.com/embed/he2AK_y4wxo?autoplay=1&mute=0&controls=1&rel=0";
+
+            function loadVideo() {
+              const container = document.getElementById("videoContainer");
+              const img = document.getElementById("thumbnailImage");
+              img.style.display = "none";
+
+              const iframe = document.createElement("iframe");
+              iframe.setAttribute("width", "100%");
+              iframe.setAttribute("height", "100%");
+              iframe.setAttribute("src", videoUrl);
+              iframe.setAttribute("frameborder", "0");
+              iframe.setAttribute("allow", "autoplay; encrypted-media");
+              iframe.setAttribute("allowfullscreen", "true");
+              iframe.id = "hoverVideo";
+
+              container.appendChild(iframe);
+            }
+
+            function removeVideo() {
+              const container = document.getElementById("videoContainer");
+              const iframe = document.getElementById("hoverVideo");
+              const img = document.getElementById("thumbnailImage");
+
+              if (iframe) {
+                container.removeChild(iframe);
+                img.style.display = "block";
+              }
+            }
+          </script>
+        </div>
+      </section>
+
+
+        <!-- section three -->
+
+        <section class="w-full bg-white py-16 my-20"> 
+          <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-12"
+          >
+            <!-- Left Video Section (now moved to the left) -->
+            <div class="w-full md:w-1/2">
+              <div
+                class="relative rounded-xl overflow-hidden shadow-xl aspect-video group"
+                onmouseenter="loadVideoLeft()"
+                onmouseleave="removeVideoLeft()"
+                id="videoContainerLeft"
+              >
+                <!-- Thumbnail Image -->
+                <img
+                  src="Thumbnail_insta.jpg"
+                  alt="Startup Team"
+                  class="w-full h-full object-cover"
+                  id="thumbnailImageLeft"
+                />
+              </div>
+            </div>
+        
+            <!-- Right Text Section -->
+            <div class="w-full md:w-1/2 space-y-6">
+              <h1 class="text-3xl md:text-4xl font-bold leading-snug">
+                <span class="block text-gray-900">
+                  CERTIFICATE OF EXCELLENCE:
+                </span>
+                <span
+                  class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-pink-500 animate-text-pop"
+                >
+                  Fastest Growing VC and Investment Bank of the Year 2024
+                </span>
+              </h1>
+              
+              <p class="text-gray-500 text-lg">
+                Connect with top investors, grab expert strategies, and rocket
+                your startup to the stars. Let's make it happen.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <div class="relative inline-block group">
+                  <div
+                    class="pointer-events-none absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"
+                  ></div>
+                  <button
+                    class="relative bg-red-600 text-white font-semibold px-6 py-3 rounded-lg transition-transform duration-300 group-hover:scale-105"
+                  >
+                    Get Started →
+                  </button>
+                </div>
+              </div>
+            </div>
+        
+            <!-- New JS with unique function and ID references -->
+            <script>
+              const videoUrlLeft = "https://www.youtube.com/embed/jluf80lTIqU?autoplay=1&mute=0&controls=1&rel=0";
+
+        
+              function loadVideoLeft() {
+                const container = document.getElementById("videoContainerLeft");
+                const img = document.getElementById("thumbnailImageLeft");
+                img.style.display = "none";
+        
+                const iframe = document.createElement("iframe");
+                iframe.setAttribute("width", "100%");
+                iframe.setAttribute("height", "100%");
+                iframe.setAttribute("src", videoUrlLeft);
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute("allow", "autoplay; encrypted-media");
+                iframe.setAttribute("allowfullscreen", "true");
+                iframe.id = "hoverVideoLeft";
+        
+                container.appendChild(iframe);
+              }
+        
+              function removeVideoLeft() {
+                const container = document.getElementById("videoContainerLeft");
+                const iframe = document.getElementById("hoverVideoLeft");
+                const img = document.getElementById("thumbnailImageLeft");
+        
+                if (iframe) {
+                  container.removeChild(iframe);
+                  img.style.display = "block";
+                }
+              }
+            </script>
+          </div>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </header>
+  </body>
+</html>
